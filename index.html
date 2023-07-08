@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="content">
+            <div class="title">
+                <h1>QR Code Generator</h1>
+            </div>
+
+            <div class="input">
+                <input type="text" class="form-control" id="input" placeholder="https://">
+            </div>
+
+            <div class="button">
+                <button class="btn btn-secondary" id="btn-generate">Gerar</button>
+            </div>
+        </div>
+
+        <div class="qrcode" id="qrcode"></div>
+
+        <div class="download" id="download"></div>
+
+    </div>
+</body>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/qrcode.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

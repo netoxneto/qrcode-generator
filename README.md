@@ -27,6 +27,10 @@ O projeto possui a seguinte estrutura de arquivos:
 - `index.html`: Arquivo HTML principal que contém a interface do sistema.
 - `style.css`: Arquivo CSS que define o estilo da página.
 - `main.js`: Arquivo JavaScript responsável por manipular os elementos da página e gerar o QR Code.
+- `bootstrap.min.css`: Arquivo CSS do Bootstrap 5, responsável pelo estilo básico da página.
+- `bootstrap.min.js`: Arquivo JavaScript do Bootstrap 5, responsável por adicionar interatividade aos elementos da página.
+- `qrcode.js`: Arquivo JavaScript do QRCode.js, biblioteca utilizada para a geração de QR Codes.
+- `qrcode.min.js`: Arquivo JavaScript minificado do QRCode.js, versão compacta da biblioteca para melhor desempenho.
 
 ## Personalização
 

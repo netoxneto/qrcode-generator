@@ -5,7 +5,7 @@ const viewDownload = document.getElementById('download');
 
 textInput.focus();
 
-function createQR() {
+async function createQR() {
     viewQR.innerHTML = '';
 
     if (!textInput.value) {
@@ -17,6 +17,8 @@ function createQR() {
     let qrcode = new QRCode(viewQR, {
         width: 180,
         height: 180,
+        // colorDark: "#ffffff",
+        // colorLight: "#2b2a2a"
         colorDark: "#000000",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
@@ -26,21 +28,26 @@ function createQR() {
 }
 
 function createButton() {
+    // Cria Tag 'a' Download
     let downloadButton = document.createElement('a');
-    downloadButton.classList.add('btn');
-    downloadButton.classList.add('btn-success');
-    downloadButton.setAttribute('id', 'downloadButton');
-    downloadButton.textContent = "Download";
+
+    // Atribui as classes
+    downloadButton.classList.add('btn')
+    downloadButton.classList.add('btn-success')
+    downloadButton.setAttribute('id', 'downloadButton')
+
+    // Atribui Valor
+    let valueLink = document.createTextNode("Download");
+    downloadButton.appendChild(valueLink);
     return downloadButton;
 }
 
-btnGenerate.addEventListener('click', () => {
+btnGenerate.addEventListener('click',() => {
     createQR();
     viewDownload.innerHTML = '';
     viewDownload.appendChild(createButton());
-    setTimeout(() => {
-        let downloadButton = document.getElementById('downloadButton');
-        downloadButton.setAttribute('href', viewQR.querySelector('img').src);
-        downloadButton.setAttribute('download', 'qrcode.png');
-    }, 1);
-});
+    setTimeout(()=>{
+        document.getElementById('downloadButton').setAttribute('href', viewQR.children[1].src )
+        document.getElementById('downloadButton').setAttribute('download', 'qrcode')
+    }, 1)
+})

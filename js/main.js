@@ -49,5 +49,5 @@ btnGenerate.addEventListener('click',() => {
     setTimeout(()=>{
         document.getElementById('downloadButton').setAttribute('href', viewQR.children[1].src )
         document.getElementById('downloadButton').setAttribute('download', 'qrcode.png')
-    }, 100)
+    }, 1000)
 })
